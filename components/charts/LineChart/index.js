@@ -1,6 +1,6 @@
 import { ResponsiveLine } from '@nivo/line'
 
-export default function MyResponsiveLine({ data }) {
+export default function LineChart({ data }) {
     return (
     <ResponsiveLine
         data={data}

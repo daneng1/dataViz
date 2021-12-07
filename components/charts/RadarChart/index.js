@@ -1,6 +1,6 @@
 import { ResponsiveRadar } from '@nivo/radar';
 
-export default function MyResponsiveRadar({ data }) {
+export default function RadarChart({ data }) {
     return (
     <ResponsiveRadar
         data={data}

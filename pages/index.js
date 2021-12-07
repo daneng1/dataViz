@@ -1,7 +1,10 @@
-import MyResponsiveRadar from "../components/charts/myResponsiveRadar";
-import MyResponsiveLine from "../components/charts/myResponsiveLine";
+import { RadarChart, LineChart, GeoChart } from '../components/charts';
+
 import radarData from "../data/radarData.json";
 import lineData from "../data/lineData.json";
+import geoData from '../data/geoData.json';
+import geoFeatures from '../data/features.json';
+
 import styled from "styled-components";
 
 const StyledContainer = styled.div`
@@ -23,9 +26,11 @@ function HomePage() {
   return (
     <StyledContainer>
       <StyledH1>Radar Chart</StyledH1>
-      <MyResponsiveRadar data={radarData} />
+      <RadarChart data={radarData} />
       <StyledH1>Line Chart</StyledH1>
-      <MyResponsiveLine data={lineData} />
+      <LineChart data={lineData} />
+      <StyledH1>Geo Chart</StyledH1>
+      <GeoChart features={geoFeatures} data={geoData} />
     </StyledContainer>
   );
 }
